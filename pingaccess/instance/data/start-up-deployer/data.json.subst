@@ -248,33 +248,6 @@
                 "defaultAuthTypeOverride": null,
                 "rootResource": true,
                 "applicationId": 1
-            },
-            {
-                "id": 2,
-                "name": "Root Resource",
-                "methods": [
-                    "*"
-                ],
-                "pathPatterns": [
-                    {
-                        "pattern": "/*",
-                        "type": "WILDCARD"
-                    }
-                ],
-                "pathPrefixes": [
-                    "/*"
-                ],
-                "auditLevel": "ON",
-                "anonymous": false,
-                "enabled": true,
-                "unprotected": false,
-                "policy": {
-                    "Web": [],
-                    "API": []
-                },
-                "defaultAuthTypeOverride": null,
-                "rootResource": true,
-                "applicationId": 2
             }
         ],
         "rules": [
