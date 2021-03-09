@@ -77,42 +77,6 @@
                     ],
                     "API": []
                 }
-            },
-            {
-                "id": 2,
-                "enabled": true,
-                "agentCacheInvalidatedResponseDuration": 900,
-                "agentCacheInvalidatedExpiration": 1589136403108,
-                "lastModified": 1589135503108,
-                "requireHTTPS": true,
-                "name": "pingdirectory_rest_api",
-                "description": "",
-                "manualOrderingEnabled": false,
-                "resourceOrder": [],
-                "applicationType": "API",
-                "defaultAuthType": "Web",
-                "spaSupportEnabled": false,
-                "destination": "Site",
-                "contextRoot": "/directory/v1",
-                "realm": null,
-                "caseSensitivePath": false,
-                "allowEmptyPathSegments": false,
-                "webSessionId": 0,
-                "issuer": null,
-                "siteId": 3,
-                "agentId": 0,
-                "virtualHostIds": [
-                    2
-                ],
-                "identityMappingIds": {
-                    "Web": 0,
-                    "API": 0
-                },
-                "accessValidatorId": 1,
-                "policy": {
-                    "Web": [],
-                    "API": []
-                }
             }
         ],
         "authTokenMgmt": {
