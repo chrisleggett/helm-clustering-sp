@@ -362,10 +362,6 @@
                 "useProxy": false
             }
         ],
-        "tokenProvider": {
-            "useThirdParty": false,
-            "type": "PingFederate"
-        },
         "unknownResources": {
             "errorStatusCode": 403,
             "errorTemplateFile": "general.error.page.template.html",
