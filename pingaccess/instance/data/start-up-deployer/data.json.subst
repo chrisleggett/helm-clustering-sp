@@ -221,7 +221,7 @@
         "oauthKeyMgmt": {
             "keyRollEnabled": true,
             "keyRollPeriodInHours": 24
-        }
+        },
         "rejectionHandlers": [
             {
                 "className": "com.pingidentity.pa.policy.rejectionhandler.errortemplate.ErrorTemplateRejectionHandlerPlugin",
@@ -336,19 +336,6 @@
                 ],
                 "configuration": {
                     "rejectionHandler": "2"
-                }
-            }
-        ],
-        "siteAuthenticators": [
-            {
-                "className": "com.pingidentity.pa.siteauthenticators.BasicAuthTargetSiteAuthenticator",
-                "id": 1,
-                "name": "pingdirectory_rest_api_authn",
-                "configuration": {
-                    "username": "${ROOT_USER_DN}",
-                    "password": {
-                        "value": "${PING_IDENTITY_PASSWORD}"
-                    }
                 }
             }
         ],
