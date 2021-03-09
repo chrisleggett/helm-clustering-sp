@@ -221,42 +221,7 @@
         "oauthKeyMgmt": {
             "keyRollEnabled": true,
             "keyRollPeriodInHours": 24
-        },
-        "pingFederateAdmin": {
-            "adminUsername": "${ROOT_USER}",
-            "adminPassword": {
-                "value": "${PING_IDENTITY_PASSWORD}"
-            },
-            "host": "${PF_ADMIN_PRIVATE_HOSTNAME}",
-            "port": ${PF_ADMIN_PRIVATE_PORT_HTTPS},
-            "basePath": "",
-            "useProxy": false,
-            "trustedCertificateGroupId": 2,
-            "secure": true,
-            "auditLevel": "OFF"
-        },
-        "pingFederateOAuth": {
-            "clientId": "rs_client",
-            "clientSecret": {
-                "value": "2Federate"
-            },
-            "c  acheTokens": false,
-            "tokenTimeToLiveSeconds": -1,
-            "subjectAttributeName": "Username",
-            "sendAudience": false,
-            "accessValidatorId": 1,
-            "useTokenIntrospection": false,
-            "name": "PingFederate"
-        },
-        "pingFederateRuntime": {
-            "description": null,
-            "issuer": "https://${PF_ENGINE_PRIVATE_HOSTNAME}:${PF_ENGINE_PRIVATE_PORT_HTTPS}",
-            "trustedCertificateGroupId": 2,
-            "useProxy": false,
-            "useSlo": false,
-            "stsTokenExchangeEndpoint": null,
-            "skipHostnameVerification": true
-        },
+        }
         "rejectionHandlers": [
             {
                 "className": "com.pingidentity.pa.policy.rejectionhandler.errortemplate.ErrorTemplateRejectionHandlerPlugin",
@@ -408,54 +373,8 @@
                 "availabilityProfileId": 1,
                 "loadBalancingStrategyId": 0,
                 "useProxy": false
-            },
-            {
-                "id": 2,
-                "name": "pingfederate_docker",
-                "targets": [
-                    "${PF_ENGINE_PRIVATE_HOSTNAME}:${PF_ENGINE_PRIVATE_PORT_HTTPS}"
-                ],
-                "secure": true,
-                "trustedCertificateGroupId": 2,
-                "sendPaCookie": true,
-                "useTargetHostHeader": false,
-                "keepAliveTimeout": 0,
-                "maxConnections": -1,
-                "maxWebSocketConnections": -1,
-                "siteAuthenticatorIds": [],
-                "skipHostnameVerification": false,
-                "expectedHostname": null,
-                "availabilityProfileId": 1,
-                "loadBalancingStrategyId": 0,
-                "useProxy": false
-            },
-            {
-                "id": 3,
-                "name": "pingdirectory_rest_api",
-                "targets": [
-                    "${PD_ENGINE_PRIVATE_HOSTNAME}:${HTTPS_PORT}"
-                ],
-                "secure": true,
-                "trustedCertificateGroupId": 2,
-                "sendPaCookie": false,
-                "useTargetHostHeader": true,
-                "keepAliveTimeout": 0,
-                "maxConnections": -1,
-                "maxWebSocketConnections": -1,
-                "siteAuthenticatorIds": [
-                    1
-                ],
-                "skipHostnameVerification": true,
-                "expectedHostname": null,
-                "availabilityProfileId": 1,
-                "loadBalancingStrategyId": 0,
-                "useProxy": false
             }
         ],
-        "tokenProvider": {
-            "useThirdParty": false,
-            "type": "PingFederate"
-        },
         "unknownResources": {
             "errorStatusCode": 403,
             "errorTemplateFile": "general.error.page.template.html",
